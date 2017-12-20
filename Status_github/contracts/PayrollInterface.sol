@@ -237,7 +237,7 @@ contract PayrollInterface {
     /* ORACLE ONLY */
 
     function setExchangeRate(address token, uint256 EURExchangeRate) {
-        require(msg.sender == owner); // don't forget change it to oracle
+        require(msg.sender == oracle); // don't forget change it to oracle
         exchangeboard[token] = EURExchangeRate;
 
     } // uses decimals from token
